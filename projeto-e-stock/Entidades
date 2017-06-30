@@ -1,0 +1,24 @@
+GameType - Enum
+
+CharacterSheet
+  GameType
+  SheetLocation
+
+
+Chronicle
+  Name
+  Players
+  GameType ou CharacterSheet
+  GameMaster
+
+Player
+  Name
+  Chronicles
+  Characters
+
+Character
+  Informações da folha
+  Incluindo:
+    Player
+    Chronicle
+
