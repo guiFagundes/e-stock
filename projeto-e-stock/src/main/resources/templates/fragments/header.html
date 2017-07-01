@@ -5,13 +5,56 @@
 <body>
 	<!-- Navbar -->
 	<div th:fragment="header">
-		<ul class="nav nav-tabs">
-			<li role="presentation" class="active"><a href="#"
-				th:href="@{/}">Home</a></li>
-			<li role="presentation"><a href="#" th:href="@{/users}">Users</a></li>
-			<li role="presentation"><a href="#" th:href="@{/user/new}">Create
-					new user</a></li>
-		</ul>
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+					<a class="navbar-brand" href="#">Project name</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html" th:href="@{/gohome}">Sobre</a></li>
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Usuarios <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li role="presentation"><a href="#" th:href="@{/gohome}">Criar
+										novo usuario</a></li>
+								<li role="presentation"><a href="#" th:href="@{/users}">Lista
+										de Usuarios</a></li>
+							</ul></li>
+
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Estoques <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li role="presentation"><a href="#"
+									th:href="@{/estoque/new}">Criar novo estoque</a></li>
+								<li role="presentation"><a href="#" th:href="@{/estoques}">Lista
+										de Estoques</a></li>
+							</ul></li>
+
+						<!-- Parte da direita da navbar -->
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown" role="button" aria-haspopup="true"
+							aria-expanded="false">Administrador <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li role="presentation"><a href="index.html">Logout</a></li>
+							</ul></li>
+					
+					</ul>
+				</div>
+
+				<!--/.nav-collapse -->
+			</div>
+		</nav>
 	</div>
 </body>
 </html>
